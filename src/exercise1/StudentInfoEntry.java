@@ -23,16 +23,16 @@ public class StudentInfoEntry extends Application {
         // labels
         Label nameLbl = new Label("Name");
         Label addressLbl = new Label("Address:");
-        Label provinceLbl = new Label("Province:");
         Label cityLbl = new Label("City:");
+        Label provinceLbl = new Label("Province:");
         Label postalCodeLbl = new Label("Post Code:");
         Label phoneNumLbl = new Label("Phone Number:");
         Label emailLbl = new Label("Email:");
         // Text fields
         TextField nameTxf = new TextField();
         TextField addressTxf = new TextField();
-        TextField provinceTxf = new TextField();
         TextField cityTxf = new TextField();
+        TextField provinceTxf = new TextField();
         TextField postalCodeTxf = new TextField();
         TextField phoneNumTxf = new TextField();
         TextField emailTxf = new TextField();
@@ -90,15 +90,15 @@ public class StudentInfoEntry extends Application {
             // get values from text field
             String name = nameTxf.getText();
             String address = addressTxf.getText();
-            String province = provinceTxf.getText();
             String city = cityTxf.getText();
+            String province = provinceTxf.getText();
             String postCode = postalCodeTxf.getText();
             String phoneNum = phoneNumTxf.getText();
             String email = emailTxf.getText();
             // Join basic information
             String basicInfo = String.join(
                     ", ",
-                    name, address, province, city, postCode, phoneNum, email);
+                    name, address, city, province, postCode, phoneNum, email);
             message += basicInfo;
 
             // Optional involvement message
@@ -141,8 +141,8 @@ public class StudentInfoEntry extends Application {
         infoLabelsVb.getChildren().addAll(
                 nameLbl,
                 addressLbl,
-                provinceLbl,
                 cityLbl,
+                provinceLbl,
                 postalCodeLbl,
                 phoneNumLbl,
                 emailLbl
@@ -154,8 +154,8 @@ public class StudentInfoEntry extends Application {
         infoInputsVb.getChildren().addAll(
                 nameTxf,
                 addressTxf,
-                provinceTxf,
                 cityTxf,
+                provinceTxf,
                 postalCodeTxf,
                 phoneNumTxf,
                 emailTxf
